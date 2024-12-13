@@ -12,3 +12,6 @@ if (!dir.exists(folder)) {
 
 # Initialize an empty list to store user records
 records <- list()
+
+# Set a control variable for the loop
+continue <- TRUE
