@@ -44,8 +44,22 @@ while (continue) {
   )
   
   # Ask the user if they want to add another record
-  response <- tolower(readline(prompt = "Do you want to add another record? (yes/no): "))
-  if (response != "yes") {
+  response <- tolower(readline(prompt = "Do you want to add another record? (y/n): "))
+  if (response != "y") {
     continue <- FALSE  # Stop the loop if the response is not "yes"
   }
 }
+
+# Combine all records into a single data frame
+data <- do.call(rbind, records)
+
+# Display the entered data
+cat("Data entered:\n")
+print(data)
+
+# Save the data frame as a CSV file inside the folder
+file_path <- file.path(folder, "user_data.csv")
+write.csv(data, file = file_path, row.names = FALSE)
+
+# Confirm that the file was created successfully
+cat("File saved at:", file_path, "\n")
