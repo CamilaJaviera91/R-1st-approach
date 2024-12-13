@@ -9,3 +9,6 @@ if (!dir.exists(folder)) {
 } else {
   cat("Folder already exists:", folder, "\n")
 }
+
+# Initialize an empty list to store user records
+records <- list()
