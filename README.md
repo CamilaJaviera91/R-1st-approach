@@ -39,3 +39,39 @@ This R script is designed to collect user information (name, age, and city), sto
 ## Example Output
 
 ### Sample Input:
+
+``` 
+Enter your name: Alice Enter your age (numeric): 30 
+```
+``` 
+Enter your city: New York Do you want to add another record? (y/n): y
+``` 
+``` 
+Enter your name: Bob Enter your age (numeric): 25 
+``` 
+``` 
+Enter your city: San Francisco Do you want to add another record? (y/n): n
+``` 
+
+### Sample Data in Console
+### Generated CSV File:
+
+`user_data.csv` will contain:
+| Name  | Age | City          |
+|-------|-----|---------------|
+| Alice | 30  | New York      |
+| Bob   | 25  | San Francisco |
+
+## Notes
+
+- Ensure the script has write permissions for the folder where the output file will be created.
+- The script gracefully handles non-numeric inputs for age, prompting the user until a valid value is provided.
+
+## Contact
+
+For questions or suggestions, feel free to reach out!
+
+---
+
+Happy coding! 😊
+
